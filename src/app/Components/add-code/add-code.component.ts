@@ -55,6 +55,10 @@ export class AddCodeComponent implements OnInit {
    else{
     this.addCodeService.AddCodeTODB(this.CodeForm.value);  
     this.addCodeService.AddTechnology(this.CodeForm.controls['Technology'].value);
+    alert('Saved Successfull');
+    this.CodeForm.get('Technology')?.patchValue('');
+    this.CodeForm.get('CodeFor')?.patchValue('');
+    this.CodeForm.get('Codes')?.patchValue('');
    }
     
   }  
