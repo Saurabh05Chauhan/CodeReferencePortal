@@ -30,26 +30,26 @@ export class ViewCodeComponent implements OnInit {
         (res) => {
           debugger;
           this.Technology = res;
-          console.log(this.Technology);
+          (this.Technology);
         },
         (err) => {
-          console.log(err);
+          (err);
         },
         () => {
-          console.log(this.Technology);
+          (this.Technology);
         }
       );
   }
 
   GetCodeBody(CodeFor:string){
     debugger
-console.log(CodeFor)
+(CodeFor)
 this.Codes=[];
 ViewCodeComponent.codeData.forEach((item)=>{
 if(item.CodeFor==CodeFor){
   this.Code=(item);
-  this.Codes.push(item.Codes)
-  console.log(this.Codes)
+  this.Codes.push(item.Codes);
+  (this.Codes)
 }
 })
   }
@@ -68,7 +68,7 @@ if(item.CodeFor==CodeFor){
           this.CodeForList.push(element)
         }); 
 
-        console.log(this.CodeForList)
+        (this.CodeForList)
       });
   }
 }
