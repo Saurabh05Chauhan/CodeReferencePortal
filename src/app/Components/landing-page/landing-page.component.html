@@ -1,0 +1,54 @@
+<div class="position">
+	<div class="row">
+	<div class="card bg-transparent border-secondary hover  mb-3" style="width: 18rem;">
+		<div class="card-body ">
+			<h5 class="card-title" style="color: white;">Add Code</h5>
+			<!-- <h6 class="card-subtitle mb-2 text-muted" style="color: white;">Card subtitle</h6> -->
+			<p class="card-text" style="color: white;">Click below to add your code.</p>
+			<a routerLink="/add" class="card-link">Click Me</a>
+		</div>
+	</div>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<div class="card bg-transparent border-secondary hover2 mb-3" style="width: 18rem;">
+		<div class="card-body ">
+			<h5 class="card-title" style="color: white;">View Code</h5>
+			<!-- <h6 class="card-subtitle mb-2 text-muted" style="color: white;">Card subtitle</h6> -->
+			<p class="card-text" style="color: white;">Click below to view your code.</p>
+			<a routerLink="/view" class="card-link">Click Me</a>
+		</div>
+
+	</div>
+</div>
+</div>
+<div>
+	<ngb-carousel style="z-index: -1; top:0; position: absolute; width: -webkit-fill-available;">
+		<ng-template ngbSlide>
+			<div class="picsum-img-wrapper">
+				<img src="../assets/photos.avif" alt="Random first slide" />
+			</div>
+			<div class="carousel-caption">
+				<h5>Your Own Code Library</h5>
+				<!-- <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> -->
+			</div>
+		</ng-template>
+		<p>Test</p>
+		<ng-template ngbSlide>
+			<div class="picsum-img-wrapper">
+				<img src="../assets/Photos1.jpg" alt="Random second slide" />
+			</div>
+			<div class="carousel-caption">
+				<h5>Keep it for your reference</h5>
+				<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+			</div>
+		</ng-template>
+		<ng-template ngbSlide>
+			<div class="picsum-img-wrapper">
+				<img src="../assets/photo3.jpg" alt="Random third slide" />
+			</div>
+			<div class="carousel-caption">
+				<h5>Enjoy Faster Developement</h5>
+
+			</div>
+		</ng-template>
+	</ngb-carousel>
+	</div>

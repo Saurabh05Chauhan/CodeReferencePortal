@@ -1,0 +1,51 @@
+<br>
+<div class="container">
+<h2>Add Code</h2>
+<br>
+<div class="container" style="padding-left: 21em;">
+    <form [formGroup]="CodeForm" (ngSubmit)="onSubmit()" >
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Technology</label>
+            <br>
+            <input type="text" class="form-control" id="Technology" placeholder="Enter Technology"
+                formControlName="Technology" style="width: 57.5%;"[ngClass]="{ 'is-invalid': f['Technology'].touched && f['Technology'].invalid, 'is-valid': f['Technology'].valid }" required>
+        </div>
+
+
+        <div class="mb-3 ">
+            <label for="inputEmail3" class="form-label">Code For</label>
+            <br>
+            <input type="text" class="form-control" id="CodFor" style="width: 57.5%;" formControlName="CodeFor" [ngClass]="{ 'is-invalid': f['CodeFor'].touched && f['CodeFor'].invalid, 'is-valid': f['CodeFor'].valid }">
+
+        </div>
+        <div formArrayName="Codes">
+            <div *ngFor="let quantity of quantities().controls; let i=index" [formGroupName]="i">
+                <div class="row mb-3 ">
+                    <div class="col sm-2">
+                        <label for="inputEmail3" class="form-label">Page Title {{i+1}}</label>
+                        <br>
+                        <input type="text" class="form-control"  
+                            id="PageTitle" formControlName="PageTitle" >
+                    </div>
+                    <div class="col sm-2">
+                        <button type="button" class="btn btn-danger btn-close" (click)="removeQuantity(i)" aria-label="Close" style="margin-top: 36px;"></button>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Your Code {{i+1}}</label>
+                    <textarea class="form-control" id="YourCode" style="width: 57.5%;" rows="5"
+                        formControlName="code" ></textarea>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="button" id="add" (click)="AddValues()">Add More Field</button>
+<br>
+<br><br>
+        <div>
+            <button class="btn btn-success" type="submit">Save Data</button>
+        </div>
+    </form>
+
+
+</div></div>

@@ -1,0 +1,27 @@
+
+img{
+    width: 100%!important;
+    height: 38em !important;
+    filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+.position{
+z-index: 9999;
+position: relative;
+top:0;
+margin: 11em;
+margin-left: 30em;
+}
+
+.hover:hover{
+    
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.hover2:hover{
+  
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}

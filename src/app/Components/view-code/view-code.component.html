@@ -1,0 +1,43 @@
+<br>
+<div class="row">
+    <div class="col" style="margin-left: 28px;">
+        <select class="drop" (change)="DropSelectedIndexChanged($event)">
+            <option value="default" class="drop-li">Select Technology</option>
+            <option class="drop-li" *ngFor="let item of Technology" [value]="item.Technology">
+                {{item.Technology| titlecase}}
+            </option>
+        </select>
+    </div>
+</div>
+<hr>
+<div class="row" *ngIf="CodeForList.length>0">
+    <div class="col-3" style="    margin-left: 28px;">
+        <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+            <ngb-panel title="{{selectedValue | titlecase}}">
+                <ng-template ngbPanelContent>
+                    <div class="list-group" >
+                        <!-- <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                            A second link item
+                        </a> -->
+                        <a class="list-group-item list-group-item-action"*ngFor="let item of CodeForList" (click)="GetCodeBody(item.CodeFor)">{{item.CodeFor}}</a>
+                    </div>
+                </ng-template>
+
+            </ngb-panel>
+        </ngb-accordion>
+    </div>
+    <div class="col-9" style="    width: 70%;" *ngIf="Code!=null">
+        <h2>{{Code.CodeFor}}</h2>
+        <br>
+        <div *ngFor="let item of Codes">
+            <div *ngFor="let i of item">
+            <h4>{{i.PageTitle | titlecase}}</h4>
+            <p>
+                {{i.code}}
+            </p>
+            <br>
+            <br>
+        </div>
+        </div>
+    </div>
+</div>
