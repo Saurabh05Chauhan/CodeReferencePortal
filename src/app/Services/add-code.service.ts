@@ -17,9 +17,9 @@ export class AddCodeService {
 
   AddTechnology(TechName:Technology){
     this.afs.collection('Technology',ref=>ref.where('Technology','==',TechName)).get().subscribe(res=>{
-      debugger
+      
       if(res.docs.length<=0){
-        debugger
+        
         this.afs.collection('/Technology').add({Technology:TechName})
       }
     })

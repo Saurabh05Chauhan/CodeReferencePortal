@@ -22,13 +22,13 @@ export class ViewCodeComponent implements OnInit {
   }
 
   GetTechnology() {
-    debugger;
+    ;
     this.codeservice
       .GetTechnology()
       .valueChanges()
       .subscribe(
         (res) => {
-          debugger;
+          ;
           this.Technology = res;
           (this.Technology);
         },
@@ -42,7 +42,7 @@ export class ViewCodeComponent implements OnInit {
   }
 
   GetCodeBody(CodeFor:string){
-    debugger
+    
 (CodeFor)
 this.Codes=[];
 ViewCodeComponent.codeData.forEach((item)=>{
@@ -55,7 +55,7 @@ if(item.CodeFor==CodeFor){
   }
 
   DropSelectedIndexChanged(e: any) {
-    debugger;
+    ;
      this.selectedValue = e.target.value;
     this.codeservice
       .GetCodeForValues(this.selectedValue)

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddCodeComponent } from './Components/add-code/add-code.component';
 import { LandingPageComponent } from './Components/landing-page/landing-page.component';
+import { NotesComponent } from './Components/notes/notes.component';
 import { ViewCodeComponent } from './Components/view-code/view-code.component';
 
 const routes: Routes = [
@@ -11,6 +12,9 @@ const routes: Routes = [
   },
   {
     path:'view',component:ViewCodeComponent
+  },
+  {
+    path:'note',component:NotesComponent
   }
 ];
 

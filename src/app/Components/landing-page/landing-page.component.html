@@ -1,54 +1,52 @@
-<div class="position">
+<h2  style="color: white; margin: 6px;">Dashboard</h2>
+
+<div class="container justify-content-center">
 	<div class="row">
-	<div class="card bg-transparent border-secondary hover  mb-3" style="width: 18rem;">
-		<div class="card-body ">
-			<h5 class="card-title" style="color: white;">Add Code</h5>
-			<!-- <h6 class="card-subtitle mb-2 text-muted" style="color: white;">Card subtitle</h6> -->
-			<p class="card-text" style="color: white;">Click below to add your code.</p>
-			<a routerLink="/add" class="card-link">Click Me</a>
+	<div class="card bg-transparent border-secondary mb-3" style="max-width: 540px;">
+		<div class="row g-0">
+		  <div class="col-md-4 flex-shrink-0">
+			<img src="../../../assets/developers.png" class="img-fluid rounded-start" alt="...">
+		  </div>
+		  <div class="col-md-8">
+			<div class="card-body">
+				<h5 class="card-title" style="color: white;">Add Code</h5>
+			  <p class="card-text" style="color: white;">Add code for your reference. Your personal code keeper.</p>
+			  <a routerLink="/add" class="card-link">Add here</a>
+			</div>
+		  </div>
 		</div>
+	  </div>
 	</div>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<div class="card bg-transparent border-secondary hover2 mb-3" style="width: 18rem;">
-		<div class="card-body ">
-			<h5 class="card-title" style="color: white;">View Code</h5>
-			<!-- <h6 class="card-subtitle mb-2 text-muted" style="color: white;">Card subtitle</h6> -->
-			<p class="card-text" style="color: white;">Click below to view your code.</p>
-			<a routerLink="/view" class="card-link">Click Me</a>
+	<div class="row">
+	  <div class="card bg-transparent border-secondary mb-3" style="max-width: 540px;">
+		<div class="row g-0">
+		  <div class="col-md-4 flex-shrink-0">
+			<img src="../../../assets/notePadView.png"  style="width: 8em; margin: 17px;" class="img-fluid rounded-start" alt="...">
+		  </div>
+		  <div class="col-md-8">
+			<div class="card-body">
+				<h5 class="card-title" style="color: white;">View Code</h5>
+			  <p class="card-text" style="color: white;">View code your saved code in few steps.</p>
+			  <a routerLink="/view" class="card-link">View here</a>
+			</div>
+		  </div>
 		</div>
-
-	</div>
+	  </div>
+	  </div>
+	  <div class="row">
+		<div class="card bg-transparent border-secondary mb-3" style="max-width: 540px;">
+		  <div class="row g-0">
+			<div class="col-md-4 flex-shrink-0">
+			  <img src="../../../assets/note.png"  style="width: 8em; margin: 17px;" class="img-fluid rounded-start" alt="...">
+			</div>
+			<div class="col-md-8">
+			  <div class="card-body">
+				  <h5 class="card-title" style="color: white;">Notes Section</h5>
+				<p class="card-text" style="color: white;">Maintain your key notes here.</p>
+				<a routerLink="/note" class="card-link">Click here</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		</div>
 </div>
-</div>
-<div>
-	<ngb-carousel style="z-index: -1; top:0; position: absolute; width: -webkit-fill-available;">
-		<ng-template ngbSlide>
-			<div class="picsum-img-wrapper">
-				<img src="../assets/photos.avif" alt="Random first slide" />
-			</div>
-			<div class="carousel-caption">
-				<h5>Your Own Code Library</h5>
-				<!-- <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> -->
-			</div>
-		</ng-template>
-		<p>Test</p>
-		<ng-template ngbSlide>
-			<div class="picsum-img-wrapper">
-				<img src="../assets/Photos1.jpg" alt="Random second slide" />
-			</div>
-			<div class="carousel-caption">
-				<h5>Keep it for your reference</h5>
-				<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
-			</div>
-		</ng-template>
-		<ng-template ngbSlide>
-			<div class="picsum-img-wrapper">
-				<img src="../assets/photo3.jpg" alt="Random third slide" />
-			</div>
-			<div class="carousel-caption">
-				<h5>Enjoy Faster Developement</h5>
-
-			</div>
-		</ng-template>
-	</ngb-carousel>
-	</div>

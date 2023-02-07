@@ -1,21 +1,21 @@
+
 <br>
-<div class="container">
-<h2>Add Code</h2>
-<br>
-<div class="container" style="padding-left: 21em;">
+<div class="container flex">
+<h2 style="color: white;">Add Code</h2>
+
     <form [formGroup]="CodeForm" (ngSubmit)="onSubmit()" >
         <div class="mb-3">
             <label for="formGroupExampleInput" class="form-label">Technology</label>
             <br>
             <input type="text" class="form-control" id="Technology" placeholder="Enter Technology"
-                formControlName="Technology" style="width: 57.5%;"[ngClass]="{ 'is-invalid': f['Technology'].touched && f['Technology'].invalid, 'is-valid': f['Technology'].valid }" required>
+                formControlName="Technology" [ngClass]="{ 'is-invalid': f['Technology'].touched && f['Technology'].invalid, 'is-valid': f['Technology'].valid }" required>
         </div>
 
 
         <div class="mb-3 ">
             <label for="inputEmail3" class="form-label">Code For</label>
             <br>
-            <input type="text" class="form-control" id="CodFor" style="width: 57.5%;" formControlName="CodeFor" [ngClass]="{ 'is-invalid': f['CodeFor'].touched && f['CodeFor'].invalid, 'is-valid': f['CodeFor'].valid }">
+            <input type="text" class="form-control" id="CodFor"  formControlName="CodeFor" [ngClass]="{ 'is-invalid': f['CodeFor'].touched && f['CodeFor'].invalid, 'is-valid': f['CodeFor'].valid }">
 
         </div>
         <div formArrayName="Codes">
@@ -34,7 +34,7 @@
 
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Your Code {{i+1}}</label>
-                    <textarea class="form-control" id="YourCode" style="width: 57.5%;" rows="5"
+                    <textarea class="form-control" id="YourCode"  rows="5"
                         formControlName="code" ></textarea>
                 </div>
             </div>
@@ -48,4 +48,4 @@
     </form>
 
 
-</div></div>
+</div>

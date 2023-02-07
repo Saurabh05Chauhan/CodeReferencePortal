@@ -48,7 +48,7 @@ export class AddCodeComponent implements OnInit {
   }  
      
   onSubmit() {  
-    debugger
+    
    if(this.CodeForm.invalid){
     alert('Please Fill All Fields')
    }

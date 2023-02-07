@@ -11,13 +11,15 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { ViewCodeComponent } from './Components/view-code/view-code.component';
+import {NotesComponent} from './Components/notes/notes.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     AddCodeComponent,
-    ViewCodeComponent
+    ViewCodeComponent,
+    NotesComponent
   ],
   imports: [
     BrowserModule,
