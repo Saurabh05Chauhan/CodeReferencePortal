@@ -1,6 +1,9 @@
 <br>
+<div class="container">
+    <h3 style="color: white;">View Code</h3>
+<div class="d-flex justify-content-start">
 <div class="row">
-    <div class="col" style="margin-left: 28px;">
+    <div class="col">
         <select class="drop" (change)="DropSelectedIndexChanged($event)">
             <option value="default" class="drop-li">Select Technology</option>
             <option class="drop-li" *ngFor="let item of Technology" [value]="item.Technology">
@@ -9,10 +12,11 @@
         </select>
     </div>
 </div>
+</div>
 <hr>
 <div class="row" *ngIf="CodeForList.length>0">
-    <div class="col-3" style="    margin-left: 28px;">
-        <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+    <div class="col-sm-4">
+        <ngb-accordion  #acc="ngbAccordion" activeIds="ngb-panel-0">
             <ngb-panel title="{{selectedValue | titlecase}}">
                 <ng-template ngbPanelContent>
                     <div class="list-group" >
@@ -26,13 +30,14 @@
             </ngb-panel>
         </ngb-accordion>
     </div>
-    <div class="col-9" style="    width: 70%;" *ngIf="Code!=null">
-        <h2>{{Code.CodeFor}}</h2>
+    <div class="col-sm-8 mobiledevice"  >
+        <div *ngIf="Code!=null">
+        <h2 style="color: white;">{{Code.CodeFor}}</h2>
         <br>
         <div *ngFor="let item of Codes">
             <div *ngFor="let i of item">
-            <h4>{{i.PageTitle | titlecase}}</h4>
-            <p>
+            <h4 style="color: white;">{{i.PageTitle | titlecase}}</h4>
+            <p style="color: white;"> 
                 {{i.code}}
             </p>
             <br>
@@ -40,4 +45,5 @@
         </div>
         </div>
     </div>
-</div>
+    </div>
+</div></div>
