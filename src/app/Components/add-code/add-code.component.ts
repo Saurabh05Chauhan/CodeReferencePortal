@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormArray, FormBuilder, FormGroup, RequiredValidator, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AddCodeService } from 'src/app/Services/add-code.service';
 
 @Component({
@@ -16,7 +17,7 @@ export class AddCodeComponent implements OnInit {
 
   CodeForm: FormGroup;  
      
-  constructor(private fb:FormBuilder,private addCodeService:AddCodeService) {  
+  constructor(private fb:FormBuilder,private addCodeService:AddCodeService,private router : Router) {  
      
     this.CodeForm = this.fb.group({  
       Technology: ['',Validators.compose([Validators.required])], 
@@ -56,9 +57,7 @@ export class AddCodeComponent implements OnInit {
     this.addCodeService.AddCodeTODB(this.CodeForm.value);  
     this.addCodeService.AddTechnology(this.CodeForm.controls['Technology'].value);
     alert('Saved Successfull');
-    this.CodeForm.get('Technology')?.patchValue('');
-    this.CodeForm.get('CodeFor')?.patchValue('');
-    this.CodeForm.get('Codes')?.patchValue('');
+    this.router.navigate(['/']);
    }
     
   }  
